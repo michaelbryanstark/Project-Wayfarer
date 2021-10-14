@@ -4,6 +4,7 @@ from django.http import HttpResponse # <- a class to handle sending a type of re
 from django.views.generic.base import TemplateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from .models import Profile
 
 
 # Create your views here.
@@ -11,8 +12,19 @@ from django.contrib.auth.forms import UserCreationForm
 class Home(TemplateView):
     template_name = "home.html"
     
-class Profile(TemplateView):
+class ProfileView(TemplateView):
     template_name = "profile.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        name = self.request.GET.get("name")
+        if name != None:
+            context["profile"] = Profile.objects.filter(name__icontains=name, user=self.request.user)
+            context["header"] = f"Searching for {name}"
+        else:
+            context["profile"] = Profile.objects.filter(user=self.request.user) 
+            context["header"] = "Profile"
+        return context
     
     
 class Signup(View):
