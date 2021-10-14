@@ -22,7 +22,7 @@ class Signup(View):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user.username)
+            login(request, user)
             return redirect('/')
         else:
             context = {'form': form}
