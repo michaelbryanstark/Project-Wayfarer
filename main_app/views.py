@@ -4,6 +4,7 @@ from django.http import HttpResponse # <- a class to handle sending a type of re
 from django.views.generic.base import TemplateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic.edit import CreateView, UpdateView
 
 
 # Create your views here.
@@ -14,7 +15,8 @@ class Home(TemplateView):
 class Profile(TemplateView):
     template_name = "profile.html"
     
-    
+
+
 class Signup(View):
     def get(self, request):
         form = UserCreationForm()
