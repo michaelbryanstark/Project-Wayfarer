@@ -13,7 +13,7 @@ class Home(TemplateView):
     
     
     
-class Signup(view):
+class Signup(View):
     def get(self, request):
         form = UserCreationForm()
         context = {"form": form}
