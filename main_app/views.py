@@ -11,6 +11,8 @@ from django.contrib.auth.forms import UserCreationForm
 class Home(TemplateView):
     template_name = "home.html"
     
+class Profile(TemplateView):
+    template_name = "profile.html"
     
     
 class Signup(View):
