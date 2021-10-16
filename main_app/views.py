@@ -7,17 +7,17 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.edit import CreateView, UpdateView
 from .models import Profile
 from django import forms
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 
 # Create your views here.
 
 class Home(TemplateView):
     template_name = "home.html"
-    
+@method_decorator(login_required, name='dispatch')
 class Profile(TemplateView):
     template_name = "profile.html"
-    
-
 
 class Signup(View):
     def get(self, request):
@@ -29,10 +29,11 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('/')
+            return redirect('/profile/')
         else:
             context = {'form': form}
             return render(request, 'registration/signup.html', context)
+          
 class ProfileForm(forms.ModelForm):
     model = Profile
     fields = [
