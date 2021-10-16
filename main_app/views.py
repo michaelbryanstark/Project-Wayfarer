@@ -31,8 +31,8 @@ class Signup(View):
 
 class City:
     def __init__(self, image, name):
-        self.image = image
         self.name = name
+        self.image = image
         
 class CityList(TemplateView):
     template_name = "city_list.html"
