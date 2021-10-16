@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% comment %}{{post.title}}{% endcomment %}
+{% block title %}{{post.title}}{% endblock  %}
+{% block content %}
+<div class="detail__img">
+  <img src="{{post.image}}" alt="{{post.title}}" />
+</div>
+  <h1 class="title">{{post.title}}</h1>
+</div>
+<div class="detail__container">
+  <div class="buttons">
+    <a href="" class="button is-info">
+      <span class="icon">
+        <i class="fas fa-edit"></i>
+      </span>
+    </a>
+    <a href="" class="button is-danger">
+      <span class="icon">
+        <i class="fas fa-trash-alt"></i>
+      </span>
+    </a>
+  </div>
+  <div class="detail__about">
+    <h4 class="title is-4">{{post.author}} Says:</h4>
+    <p class="title is-4">{{post.text}}</p>
+    <p>{{post.date_created}}</p>
+  </div>
+</div>
+
+{% endblock %}

@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Post, City, Profile
+from django.views.generic import DetailView
 
 # Create your views here.
 class Home(TemplateView):
@@ -39,3 +40,7 @@ class CityList(TemplateView):
         context["cities"] = City.objects.all()
         context["posts"] = Post.objects.all()
         return context
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = "post_detail.html"
