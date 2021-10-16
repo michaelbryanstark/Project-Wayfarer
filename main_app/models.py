@@ -23,6 +23,7 @@ class City(models.Model):
   
 class Post(models.Model):
   title = models.CharField(max_length=200)
+  image = models.CharField(max_length=150)
   text = models.TextField()
   date_created = models.DateTimeField(auto_now=True)
   author = models.ForeignKey(Profile, on_delete=models.CASCADE)
