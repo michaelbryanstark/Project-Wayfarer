@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views import View # <- View class to handle requests
 from django.http import HttpResponse # <- a class to handle sending a type of response
 from django.views.generic.base import TemplateView
@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Post, City, Profile
+from django.views.generic.edit import UpdateView
 
 # Create your views here.
 class Home(TemplateView):
@@ -39,3 +40,11 @@ class CityList(TemplateView):
         context["cities"] = City.objects.all()
         context["posts"] = Post.objects.all()
         return context
+
+class ProfileUpdate(UpdateView):
+    model = Profile
+    fields = ['name', 'img', 'current_city', 'user']
+    template_name = 'profile_update.html'
+    
+    def get_success_url(self):
+        return reverse('profile', kwargs={'pk': self.object.pk})

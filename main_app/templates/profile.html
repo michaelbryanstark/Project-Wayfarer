@@ -1,4 +1,106 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Profile Page </h1>
+
+
+<section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="columns mx-6 my-6">
+
+          <figure class="">
+            <!-- PROFILE INFO -->    
+            {% load static %}
+            {% for user in profiles %}
+            <p>Profile Picture:  <img src='{{user.img}}' width='100' alt='My image' /></p>
+            {% empty %}
+            <p> Profile Picture:  <img src='https://clipground.com/images/unicorn-head-silhouette-clipart.jpg' width='100' alt='Default image' /></p>
+            {% endfor %}
+            <div class="is-grey pl-3">
+            <p class = 'title'>{{this_profile.name}}</p>
+            <p class = 'subtitle'>{{this_profile.current_city}}</p>
+            
+              <p>
+                Posts: {{current_profile.post_set.all | length}}
+              </p>
+              <p>
+                Comments: {{current_profile.comment_set.all | length}}
+              </p>
+              <p>Joined: {{user.date_joined}}</p>
+            </div>       
+  
+              <hr>
+              {% if current_profile.id == this_profile.id %}
+              <a href="{% url 'profile_update' user.pk %}" class='button' id = 'edit-button'>Edit Profile</a>
+              {%endif%}
+
+          </figure>
+          
+        </div>
+
+        <div class="columns">
+        <!-- RECENT POSTS -->
+          <div class="card mx-6 my-6 recent_posts is-grey">
+            <h1 class="title is-1 mx-6 my-6">Recent Posts</h1>
+ 
+            {% for post in this_profile.post_set.all %}
+            
+            <div>
+              <header class="card-header">
+                <p class="card-header-title">
+                  <a class="postlink" href="{% url 'post_detail' post.id%}">
+                    {{post.title}}
+                  </a>
+                </p>
+                <a href="#" class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </a>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  
+                  {{post.content}}
+                  
+                </div>
+              </div>
+              
+              {% endfor %}
+            </div>
+          </div>
+            
+        </div>
+        </div>
+        </section>
+        
+        </div>
+        
+{% if current_profile.id == this_profile.id %}
+
+  <!-- EDIT PROFILE MODAL -->
+<div class="modal" id="edit-profile">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        {% comment %} <a href='{% url "profile_update" user.pk %}' class="modal-card-title">Edit Profile</a> {% endcomment %}
+        <!-- <button class="delete" aria-label="close"></button> -->
+      </header>
+        <section class="modal-card-body">
+        <form action="" method="POST">
+          {% csrf_token %}
+          {% comment %} {% render_field form.name class="input my-3" placeholder="Display Name"%}
+          {% render_field form.img class="input my-3" placeholder="Image URL"%}
+          {% render_field form.current_city class="input my-3" placeholder="Current City"%} {% endcomment %}
+        </section>
+        <footer class="modal-card-foot">
+        <button type="submit" value="sign_up" class="button is-success">Save Changes</button>
+        </form>
+        <button id="cancel" class="button">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+{% endif %} 
+
 {% endblock %}
