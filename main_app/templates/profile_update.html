@@ -1,8 +1,9 @@
 {% extends 'base.html' %} {% block content %}
-<h1 class="pt-3">Update {{profile.name}}</h1>
+<h1 class="pt-3">Update {{user.username}}</h1>
 
 <form action="" method="post">
-  {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
+  {% csrf_token %} {{form.as_p}}
+  <a href="{% url 'profile' %}" >Submit</a>
 </form>
 
 {% endblock %}

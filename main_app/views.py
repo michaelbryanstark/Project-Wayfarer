@@ -13,7 +13,7 @@ from django.views.generic.edit import UpdateView
 class Home(TemplateView):
     template_name = "home.html"
 @method_decorator(login_required, name='dispatch')
-class Profile(TemplateView):
+class Profile1(TemplateView):
     template_name = "profile.html"
 
 class Signup(View):
@@ -45,6 +45,7 @@ class ProfileUpdate(UpdateView):
     model = Profile
     fields = ['name', 'img', 'current_city', 'user']
     template_name = 'profile_update.html'
+    success_url = '/profile/'
     
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})
