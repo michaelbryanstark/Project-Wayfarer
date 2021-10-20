@@ -14,9 +14,9 @@
         <i class="fas fa-edit"></i>
       </span>
     </a>
-    <a href="" class="button is-danger">
+    <a href="{% url 'post_delete' post.pk %}" class="button is-danger">
       <span class="icon">
-        <i class="fas fa-trash-alt"></i>
+        <i class="button-delete">Delete</i>
       </span>
     </a>
   </div>
