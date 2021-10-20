@@ -13,7 +13,7 @@ from django.views.generic.edit import UpdateView
 class Home(TemplateView):
     template_name = "home.html"
 @method_decorator(login_required, name='dispatch')
-class Profile1(TemplateView):
+class ProfileView(TemplateView):
     template_name = "profile.html"
 
 class Signup(View):
