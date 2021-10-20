@@ -7,7 +7,7 @@
   <div class="gallery-cities">
   <h1 class="title pt-5">Cities</h1>
   {% for city in cities %}
-  <a href="">
+  <a href="{% url 'city_detail' city.pk %}">
     <div class="card">
       <div class="card-image">
         <figure class="image is-square">
@@ -28,27 +28,6 @@
   {% endfor %}
 </div>
 <br>
-<div class="gallery-posts">
-  <h1 class="title pt-5">Posts</h1>
-    {% for post in posts %}
-      <div class="card">
-        <div class="card-image">
-          <figure class="image is-square">
-            <img src="{{post.image}}" alt="{{post.title}}" />
-          </figure>
-        </div>
-        <div class="card-header">
-          <a href="{% url 'post_detail' post.pk %}" class="card-header-title">{{post.title}}</a>
-        </div>
-      </div>
-      {% empty %}
-    <article class="message">
-      <div class="message-header">
-        <p>No Posts Available</p>
-      </div>
-    </article>
-    {% endfor %}
-  </div>
 </div>
 
   {% endblock %}
