@@ -44,3 +44,7 @@ class CityList(TemplateView):
 class PostDetail(DetailView):
     model = Post
     template_name = "post_detail.html"
+    
+class CityDetail(DetailView):
+    model = City
+    template_name = "city_detail.html"
