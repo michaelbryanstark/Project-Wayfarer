@@ -27,7 +27,7 @@ class Post(models.Model):
   text = models.TextField(max_length=500)
   date_created = models.DateTimeField(auto_now=True)
   author = models.ForeignKey(Profile, on_delete=models.CASCADE)
-  city = models.ForeignKey(City, on_delete=models.CASCADE)
+  city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="posts")
   
   def __str__(self):
     return self.title
