@@ -8,5 +8,6 @@ urlpatterns = [
  path('profile/', views.Profile.as_view(), name="profile"),
  path('cities/', views.CityList.as_view(), name="city_list"),
  path('cities/posts/<int:pk>/', views.PostDetail.as_view(), name="post_detail"),
- path('cities/<int:pk>/', views.CityDetail.as_view(), name="city_detail")
+ path('cities/<int:pk>/', views.CityDetail.as_view(), name="city_detail"),
+ path('posts/<int:pk>/delete', views.PostDelete.as_view(), name="post_delete"),
 ]

@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views import View # <- View class to handle requests
 from django.http import HttpResponse # <- a class to handle sending a type of response
 from django.views.generic.base import TemplateView
@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Post, City, Profile
 from django.views.generic import DetailView
+from django.views.generic.edit import DeleteView
 
 # Create your views here.
 class Home(TemplateView):
@@ -44,6 +45,11 @@ class CityList(TemplateView):
 class PostDetail(DetailView):
     model = Post
     template_name = "post_detail.html"
+    
+class PostDelete(DeleteView):
+    model = Post
+    template_name = "post_delete_confirmation.html"
+    success_url = '/cities/'
     
 class CityDetail(DetailView):
     model = City
