@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Post, City, Profile
 from django.views.generic import DetailView
-from django.views.generic.edit import DeleteView
+from django.views.generic.edit import DeleteView, CreateView
 
 # Create your views here.
 class Home(TemplateView):
@@ -54,3 +54,15 @@ class PostDelete(DeleteView):
 class CityDetail(DetailView):
     model = City
     template_name = "city_detail.html"
+    
+class PostCreate(CreateView):
+    model = Post
+    fields = ['title', 'image', 'text', 'author', 'city' ]
+    template_name = "post_create.html"
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(PostCreate, self).form_valid(form)
+    
+    def get_success_url(self):
+        print(self.kwargs)
+        return reverse('post_detail', kwargs={'pk': self.object.pk})
