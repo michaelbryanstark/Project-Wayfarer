@@ -86,3 +86,26 @@ h2{
     color: white;
 }
 
+.gallery-forum{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gallery-cities{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.gallery-posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card-header{
+    text-align: center;
+}

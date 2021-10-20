@@ -3,8 +3,9 @@
 {% block title %}Cities{% endblock  %}
 
 {% block content %}
-<h1 class="title pt-5">Trending Cities</h1>
-<div class="gallery">
+<div class="gallery-forum">
+  <div class="gallery-cities">
+  <h1 class="title pt-5">Cities</h1>
   {% for city in cities %}
   <a href="">
     <div class="card">
@@ -27,7 +28,8 @@
   {% endfor %}
 </div>
 <br>
-<div class="gallery">
+<div class="gallery-posts">
+  <h1 class="title pt-5">Posts</h1>
     {% for post in posts %}
       <div class="card">
         <div class="card-image">
@@ -36,9 +38,7 @@
           </figure>
         </div>
         <div class="card-header">
-          <p class="card-header-title">{{post.text}}</p>
-          <p class="card-header-title">{{post.author}}</p>
-          <p class="card-header-title">{{post.date_created}}</p>
+          <a href="{% url 'post_detail' post.pk %}" class="card-header-title">{{post.title}}</a>
         </div>
       </div>
       {% empty %}
@@ -49,4 +49,6 @@
     </article>
     {% endfor %}
   </div>
-{% endblock %}
+</div>
+
+  {% endblock %}

@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Post, City, Profile
 from django.views.generic.edit import UpdateView
+from django.views.generic import DetailView
 
 # Create your views here.
 class Home(TemplateView):
@@ -49,3 +50,7 @@ class ProfileUpdate(UpdateView):
     
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})
+
+class PostDetail(DetailView):
+    model = Post
+    template_name = "post_detail.html"
