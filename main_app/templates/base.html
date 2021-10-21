@@ -22,9 +22,15 @@
         <li class="nav-item">
           <a class="nav-link" href="/cities">Cities</a>
         </li>
+        {%if user.profile.id%}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'profile_view' user.profile.id %}">Profile</a>
         </li>
+        {%else%}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'create_profile_view' %}">Create Profile</a>
+        </li>
+        {%endif%}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'logout' %}">Logout</a>
           </li>

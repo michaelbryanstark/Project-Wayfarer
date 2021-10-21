@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ProfileView, ProfileUpdate, Profile, EditProfileView
+from .views import ProfileView, ProfileUpdate, Profile, EditProfileView, CreateProfileView
 from . import views
 
 # this like app.use() in express
@@ -15,4 +15,5 @@ urlpatterns = [
  path('posts/new/', views.PostCreate.as_view(), name="post_create"),
  path('cities/new/', views.CityCreate.as_view(), name="city_create"),
  path('<int:pk>/editprofile', views.EditProfileView.as_view(), name="edit_profile_view"),
+ path('createprofile/', views.CreateProfileView.as_view(), name="create_profile_view"),
 ]

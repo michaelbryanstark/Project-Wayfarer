@@ -31,6 +31,16 @@ class EditProfileView(UpdateView):
     template_name = 'editprofile.html'
     success_url = '/'
 
+class CreateProfileView(CreateView):
+    model = Profile
+    template_name = 'createprofile.html'
+    fields = ['name', 'image', 'current_city']
+    success_url = '/'
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+
 class Signup(View):
     def get(self, request):
         form = UserCreationForm()
@@ -41,7 +51,7 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('/profile/')
+            return redirect('/')
         else:
             context = {'form': form}
             return render(request, 'registration/signup.html', context)
