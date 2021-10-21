@@ -177,11 +177,26 @@ h2{
 
 .search-button button{
     width: 100px;
-    background-color: rgb(49, 64, 131);
+    background-color: #F8955B;
     color: white;
 }
 
 .search-button button:hover{
     background-color: black;
     color: white;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+form {
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(49, 64, 131);
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
 }
