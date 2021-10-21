@@ -1,21 +1,35 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.views import View # <- View class to handle requests
 from django.http import HttpResponse # <- a class to handle sending a type of response
 from django.views.generic.base import TemplateView
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .models import Post, City, Profile
+from .models import Post, City, Profile, User
 from django.views.generic import DetailView
-from django.views.generic.edit import DeleteView, CreateView
+from django.views.generic.edit import DeleteView, CreateView, UpdateView
 
 # Create your views here.
 class Home(TemplateView):
     template_name = "home.html"
+    
 @method_decorator(login_required, name='dispatch')
-class Profile(TemplateView):
+class ProfileView(DetailView):
+    model = Profile
     template_name = "profile.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super(ProfileView, self).get_context_data(**kwargs)
+        page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
+        context["page_user"] = page_user
+        return context
+    
+class EditProfileView(UpdateView):
+    model = Profile
+    fields = ['name', 'image', 'current_city']
+    template_name = 'editprofile.html'
+    success_url = '/'
 
 class Signup(View):
     def get(self, request):
@@ -31,7 +45,15 @@ class Signup(View):
         else:
             context = {'form': form}
             return render(request, 'registration/signup.html', context)
-
+        
+@method_decorator(login_required, name='dispatch')
+class ProfileUpdate(UpdateView):
+    def get(self, request):
+        form = UserChangeForm()
+        context = {"form": form}
+        return render(request, 'registration/profile_update.html', context)
+    def get_object(self):
+        return self.request.user 
         
 class CityList(TemplateView):
     template_name = "city_list.html"
