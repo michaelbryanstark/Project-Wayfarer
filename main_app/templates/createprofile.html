@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="title">Create New Profile</h1>
+<br/><br/>
+<div>    
+{%if user.is_authenticated %}
+
+    <form method="post">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button>Submit</button>
+    </form>
+</div>
+    {%else%}
+You Cant be here
+    {% endif %}
+
+
+{% endblock %}

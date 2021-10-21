@@ -3,14 +3,14 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Profile(models.Model):
-  name = models.CharField(max_length=50)
-  img = models.CharField(max_length=500)
-  current_city=models.CharField(max_length=100)
+  user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+  name = models.CharField(max_length=50, null=True)
+  image = models.CharField(max_length=500, null=True)
+  current_city=models.CharField(max_length=100, null=True)
   date_joined=models.DateField(auto_now=True)
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
   
   def __str__(self):
-    return self.name
+    return str(self.name)
   
   
 class City(models.Model):
