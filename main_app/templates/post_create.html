@@ -1,11 +1,14 @@
 {% extends 'base.html' %} {% block content %}
     <h1>Add a Post</h1>
-    <form method="post">
-        <!--Security Feature-->
-        {% csrf_token %}
-        <!-- Generate inputs-->
-        {{form.as_p}}
-        <!--Submit Form-->
-        <input type="submit" value="Submit" />
-    </form>
+    <div class="post-create">
+        <form method="post">
+            <!--Security Feature-->
+            {% csrf_token %}
+            <!-- Generate inputs-->
+            {{form.as_p}}
+            <!--Submit Form-->
+            <button class="new-post">Submit Post</button>
+        </form>
+    </div>
+    
 {% endblock %}

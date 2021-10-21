@@ -23,7 +23,8 @@
   </div>
   </form>
   {% for city in cities %}
-  <a href="{% url 'city_detail' city.pk %}">
+  <div class="city-links">
+  <a class="city-links" href="{% url 'city_detail' city.pk %}">
     <div class="card">
       <div class="card-image">
         <figure class="image is-square">
@@ -31,10 +32,11 @@
         </figure>
       </div>
       <div class="card-header">
-        <p class="card-header-title">{{city.name}}</p>
+        <p class="card-header-title"><button class="post-detail">{{city.name}}</button></p>
       </div>
     </div>
   </a>
+</div>
 	{% empty %}
   <article class="message">
     <div class="message-header">

@@ -29,7 +29,7 @@
           </figure>
         </div>
         <div class="card-header">
-          <a href="{% url 'post_detail' post.pk %}" class="card-header-title">{{post.title}}</a>
+          <a href="{% url 'post_detail' post.pk %}" class="post-detail"><button class="post-detail">{{post.title}}</button></a>
         </div>
       </div>
       {% empty %}
@@ -39,7 +39,7 @@
       </div>
     </article>
     {% endfor %}
-    <a class="button is-dark" href="{% url 'post_create' %}"><button>Add a Post</button></a>
+    <a class="add-post" href="{% url 'post_create' %}"><button class="add-post">Add a Post</button></a>
   </div>
 </div>
 
