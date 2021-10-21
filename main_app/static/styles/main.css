@@ -168,6 +168,7 @@ h2{
     background-color: red;
     color: white;
     padding: 10px;
+    margin-top: 24px;
 }
 .is-dark button:hover{
     background-color:black;
