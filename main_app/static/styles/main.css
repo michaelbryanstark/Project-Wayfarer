@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(167, 167, 167);
+    background-color: rgb(49, 64, 131);
   }
   
   li {
@@ -23,7 +23,7 @@ ul {
   }
 
   .nav-welcome {
-      color: rgb(0, 0, 0);
+      color: #F8955B;
       display: flex;
       align-items: center;
       padding: 14px 16px;
@@ -137,7 +137,7 @@ h2{
    position: fixed;
    margin-top: 24px;
    margin-left: 24px;
-   background-color: red;
+   background-color: rgb(49, 64, 131);
    color: white;
 }
 .add-city-button button:hover{
@@ -165,12 +165,23 @@ h2{
     color: blue;
 }
 .is-dark button{
-    background-color: red;
+    background-color: rgb(49, 64, 131);
     color: white;
     padding: 10px;
     margin-top: 24px;
 }
 .is-dark button:hover{
     background-color:black;
+    color: white;
+}
+
+.search-button button{
+    width: 100px;
+    background-color: rgb(49, 64, 131);
+    color: white;
+}
+
+.search-button button:hover{
+    background-color: black;
     color: white;
 }
