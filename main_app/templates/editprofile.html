@@ -4,9 +4,6 @@
 <br/><br/>
 <div>    
 {%if user.is_authenticated %}
-    {%if user.id == profile.id%}
-    {{user.profile.current_city}}
-
     <form method="post">
         {% csrf_token %} 
         {{ form.as_p }}
@@ -16,7 +13,7 @@
     {%else%}
 You Cant be here
     {% endif %}
-{% endif %}
+
 
 
 {% endblock %}

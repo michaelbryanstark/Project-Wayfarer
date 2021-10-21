@@ -29,7 +29,9 @@ class EditProfileView(UpdateView):
     model = Profile
     fields = ['name', 'image', 'current_city']
     template_name = 'editprofile.html'
-    success_url = '/'
+    def get_success_url(self):
+         print(self.kwargs)
+         return reverse('profile_view', kwargs={'pk': self.object.pk})
 
 class CreateProfileView(CreateView):
     model = Profile
@@ -51,7 +53,7 @@ class Signup(View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('/')
+            return redirect('/createprofile/')
         else:
             context = {'form': form}
             return render(request, 'registration/signup.html', context)
