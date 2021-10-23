@@ -11,6 +11,11 @@ from django.views.generic import DetailView
 from django.views.generic.edit import DeleteView, CreateView, UpdateView
 
 # Create your views here.
+
+@login_required
+def account_redirect(request):
+    return redirect('profile_view', pk=request.user.profile.id)
+
 class Home(TemplateView):
     template_name = "home.html"
     
