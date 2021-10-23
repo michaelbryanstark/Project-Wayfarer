@@ -29,28 +29,9 @@
 <div class="">
     <button type="button"><a class="nav-link" href="{% url 'edit_profile_view' user.profile.id %}">Edit Profile</a> </button>
 </div>
-
-{% comment %} <div>
-    <form action="{% url 'edit_profile_view' profile.id %}">
-        <input type="submit" class="btn btn-primary" value="Edit Profile" />
-    </form>
-</div> {% endcomment %}
-  {% comment %} <br> {% endcomment %}
-{% comment %}
-    <form action="{% url 'add_photo' profile.id %}" enctype="multipart/form-data" method="POST">
-      {% csrf_token %}
-      <div class="form-group">
-        <input class="form-control-file btn" type="file" name="photo-file">
-        <p>
-        <input type="submit" class="btn btn-primary" value="Add Profile Picture">
-      </div>
-    </form>
-  {% endif %} {% endcomment %}
-  {% comment %} <form action="{% url 'edit_profile' profile.id %}">
-    <input type="submit" class="btn btn-primary" value="Edit Profile" />
-  </form>
- {% endcomment %}
-  <br>
+<br>
+<hr />
+<br><br>
   {% if post %}
     <h2>My Posts: </h2>
     {% for post in posts %}
