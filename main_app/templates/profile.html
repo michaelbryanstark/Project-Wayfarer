@@ -1,19 +1,60 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Profile Page </h1>
+ {% comment %} <h1>Profile Page </h1>
+{{page_user}}
+<p>Username: {{user.username}}</p>
+<p>Member Name: {{user.profile.name}}</p>
+<img src="{{user.profile.image}}" alt="User Image">
+<p>Home City: {{user.profile.current_city}}</p>
+<p>Date Joined: {{user.profile.date_joined}}</p>
 
-<div class="profile-details">
-<div class="profile-info">
-    <p>Username: {{user.username}}</p>
-    <p>Member Name: {{user.profile.name}}</p>
-    <p>Home City: {{user.profile.current_city}}</p>
-    <p>Date Joined: {{user.profile.date_joined}}</p>
-</div>
+<a class="nav-link" href="{% url 'profile_update' %}">Edit Profile ADMIN</a>
+<a class="nav-link" href="{% url 'edit_profile_view' user.profile.id %}">Edit Profile</a>  {% endcomment %}
 
-<div class="profile-pic">
-    <img src="{{user.profile.image}}" alt="User Image">
+<h1>{{ user.username}}'s Profile</h1>
+  <hr />
+<div class="">
+        <p class="profile-info">Wayfarer since {{user.profile.user.date_joined|date:'M d, Y'}}</p>
+        <p class="profile-info">Current City: {{user.profile.current_city}} </p>
+        <p>Member Name: {{user.profile.name}}</p>
+        {% if user.profile.image %}
+            <img class="main-profile-picture" src="{{ user.profile.image }}" alt="{{user.profile.username}} profile photo">
+        {% else %}
+            <img class="main-profile-picture" src="../static/main_app/images/Profile_avatar_placeholder_large.jpeg" alt="Wayfarer default profile picture">
+
+        {% endif %}
 </div>
+<br></br>
+
+<div class="">
+    <button type="button"><a class="nav-link" href="{% url 'edit_profile_view' user.profile.id %}">Edit Profile</a> </button>
 </div>
+<br>
+<hr />
+<br><br>
+  {% if post %}
+    <h2>My Posts: </h2>
+    {% for post in posts %}
+      <div class="card">
+        <div class="card-body">
+          <a class="r" href="{% url 'post_create' post.id %}">{{post.title}}</a>
+          <p>{{post.date}}</p>
+        </div>
+      </div>
+      <br>
+    {% endfor %}
+  {% else %}  
+    <div class="card">
+      <div class="card-body">
+        <h5>Once you post, you can find them here.</h5>
+        <p>For now, head over to <a class="cities-anchor" href="{% url 'city_create' %}">Cities</a> and read reviews from our other wayfarers or add your own!</p>
+      </div>
+    </div>
+    
+{% endif %} 
+
+
+{% endblock %}
 
 
 <a class="nav-link-profile" href="{% url 'edit_profile_view' user.profile.id %}"><button class="edit-profile">Edit Profile</button></a>
