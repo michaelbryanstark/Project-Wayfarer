@@ -1,16 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="Delete-title">Are you sure you want to delete {{post.title}}?</h1>
-<form  method="post">
-    {% csrf_token %}
-    <div class="confirm-delete">
-        <div class="buttons">
-            <!--confirm post delete-->
-            <input class="button-delete" type="submit" value="confirm" />
-            <!--redirect back to the post detail on cancel-->
-            <a class="button-cancel" href="{% url 'post_detail' post.pk %}"><button>Cancel</button></a>
+<h1 class="Delete-title">Are you sure you want to delete the post titled "{{post.title}}"?</h1>
+<div class="post-create">
+    <form  method="post">
+        {% csrf_token %}
+        <div class="confirm-delete">
+            <div class="buttons">
+                <!--confirm post delete-->
+                <input class="button-delete" type="submit" value="confirm" />
+                <!--redirect back to the post detail on cancel-->
+                <a class="button-cancel" href="{% url 'post_detail' post.pk %}"><button>Cancel</button></a>
+            </div>
         </div>
-    </div>
-    
-</form>
+        
+    </form>
+</div>
+
 {% endblock %}
