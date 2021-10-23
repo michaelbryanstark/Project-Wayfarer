@@ -9,6 +9,19 @@
 <div class="gallery-forum">
   <div class="gallery-cities">
   <h1 class="title pt-5">Cities</h1>
+  <form class="mb-5" method="get">
+    <div class="field has-addons">
+      <div class="control">
+        <input class="input" type="text" name="name" placeholder="name" />
+      </div>
+      <div class="control">
+        <input class="button" type="submit" value="Search" />
+      </div>
+    </div>
+    <div class='search-button'>
+    <a class="city-search-button" href="{% url 'city_list' %}"><button>Clear Search</button></a>
+  </div>
+  </form>
   {% for city in cities %}
   <a href="{% url 'city_detail' city.pk %}">
     <div class="card">

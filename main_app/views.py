@@ -77,8 +77,13 @@ class CityList(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["cities"] = City.objects.all()
-        context["posts"] = Post.objects.all()
+        name = self.request.GET.get("name")
+        if name != None:
+            context["cities"] = City.objects.filter(name__icontains=name)
+            context["header"] = f"Searching for {name}"
+        else:
+            context["cities"] = City.objects.filter() 
+            context["header"] = "City"
         return context
 
 class PostDetail(DetailView):
@@ -93,6 +98,18 @@ class PostDelete(DeleteView):
 class CityDetail(DetailView):
     model = City
     template_name = "city_detail.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        name = self.request.GET.get("name")
+        if name != None:
+            context["cities"] = City.objects.filter(name__icontains=name)
+            context["header"] = f"Searching for {name}"
+        else:
+            context["cities"] = City.objects.filter() 
+            context["header"] = "City"
+        return context
+    
     
 class PostCreate(CreateView):
     model = Post
@@ -111,5 +128,4 @@ class CityCreate(CreateView):
     fields = ['name', 'image']
     template_name = "city_create.html"
     success_url = "/cities/"
-    
     

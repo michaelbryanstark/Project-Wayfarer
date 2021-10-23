@@ -14,17 +14,17 @@
         <i class="fas fa-edit"></i>
       </span>
     </a>
-    <a href="{% url 'post_delete' post.pk %}" class="button is-danger">
-      <span class="icon">
-        <i class="button-delete">Delete</i>
-      </span>
-    </a>
   </div>
   <div class="detail__about">
     <h4 class="title is-4">{{post.author}} Says:</h4>
     <p class="title is-4">{{post.text}}</p>
     <p>{{post.date_created}}</p>
   </div>
+  <a href="{% url 'post_delete' post.pk %}" class="button is-danger">
+    <span class="icon">
+      <i class="button-delete">Delete</i>
+    </span>
+  </a>
 </div>
 
 {% endblock %}
