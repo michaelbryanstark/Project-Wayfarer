@@ -8,6 +8,7 @@ class Profile(models.Model):
   image = models.CharField(max_length=500, null=True)
   current_city=models.CharField(max_length=100, null=True)
   date_joined=models.DateField(auto_now=True)
+  user = models.OneToOneField(User, on_delete=models.CASCADE)
   
   def __str__(self):
     return str(self.name)
@@ -20,6 +21,9 @@ class City(models.Model):
   def __str__(self):
     return self.name
   
+  class Meta:
+        ordering = ['name']
+  
   
 class Post(models.Model):
   title = models.CharField(max_length=200)
@@ -31,6 +35,4 @@ class Post(models.Model):
   
   def __str__(self):
     return self.title
-  
-  class Meta: 
-    ordering = ['-date_created']
+ 

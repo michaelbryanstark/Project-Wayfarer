@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Profile Page </h1>
-{{page_user}}
-<p>Username: {{user.username}}</p>
-<p>Member Name: {{user.profile.name}}</p>
-<img src="{{user.profile.image}}" alt="User Image">
-<p>Home City: {{user.profile.current_city}}</p>
-<p>Date Joined: {{user.profile.date_joined}}</p>
+<h1>Profile Page</h1>
 
-<a class="nav-link" href="{% url 'profile_update' %}">Edit Profile ADMIN</a>
-<a class="nav-link" href="{% url 'edit_profile_view' user.profile.id %}">Edit Profile</a>
+<div class="profile-details">
+<div class="profile-info">
+    <p>Username: {{user.username}}</p>
+    <p>Member Name: {{user.profile.name}}</p>
+    <p>Home City: {{user.profile.current_city}}</p>
+    <p>Date Joined: {{user.profile.date_joined}}</p>
+</div>
+
+<div class="profile-pic">
+    <img src="{{user.profile.image}}" alt="User Image">
+</div>
+</div>
+
+
+<a class="nav-link-profile" href="{% url 'edit_profile_view' user.profile.id %}"><button class="edit-profile">Edit Profile</button></a>
 
 {% endblock %}

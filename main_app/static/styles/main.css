@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(167, 167, 167);
+    background-color: #C3073F;
   }
   
   li {
@@ -19,11 +19,11 @@ ul {
   }
   
   li a:hover {
-    background-color: #111;
+    background-color: #950740;
   }
 
   .nav-welcome {
-      color: rgb(0, 0, 0);
+      color: #1A1A1D;
       display: flex;
       align-items: center;
       padding: 14px 16px;
@@ -35,7 +35,10 @@ ul {
   }
 
 body{
-   background-color: #F8955B;
+   background-color: #1A1A1D;
+   /* background: url("main_app/images/background.jpeg") 50% 0 no-repeat fixed;
+   height: 650px;
+   padding: 100px 0 0 0;    */
 }
 
 
@@ -45,7 +48,7 @@ body{
     
 }
 .title {
-    color: white;
+    color: #C3073F;
     text-align: center;
     font-size: 50px;
 }
@@ -58,13 +61,13 @@ img {
 }
 .Wayfarer-is{
     text-align: center;
-    color: white;
+    color: #C3073F;
 }
 .title-container {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
-    color: white;
+    color: #C3073F;
 }
 .title-1 {
     display: block;
@@ -81,9 +84,27 @@ img {
     margin: 0 auto;
     padding: 20px;
 }
+
+h1 {
+    color: #C3073F;
+    text-align: center;
+}
+
+p {
+    color: white;
+}
+
 h2{
     text-align: center;
-    color: white;
+    color: #C3073F;
+}
+
+.nav-link-profile {
+    color: #C3073F;
+}
+
+.city-links {
+    color: #C3073F;
 }
 
 .gallery-forum{
@@ -128,7 +149,7 @@ h2{
 }
 .button-delete:hover{
     background-color:white;
-    color: black;
+    color: #1A1A1D;
     text-decoration: none;
 }
 
@@ -137,11 +158,11 @@ h2{
    position: fixed;
    margin-top: 24px;
    margin-left: 24px;
-   background-color: red;
+   background-color: #C3073F;
    color: white;
 }
 .add-city-button button:hover{
-    background-color: black;
+    background-color: #6F2232;
     color: white;
 }
 .city-button a{
@@ -165,12 +186,146 @@ h2{
     color: blue;
 }
 .is-dark button{
-    background-color: red;
+    background-color: #C3073F;
     color: white;
     padding: 10px;
     margin-top: 24px;
 }
 .is-dark button:hover{
-    background-color:black;
+    background-color:#1A1A1D;
+    color: white;
+}
+
+.search-button button{
+    width: 100px;
+    background-color: #C3073F;
+    color: white;
+}
+
+.search-button button:hover{
+    background-color: #1A1A1D;
+    color: white;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+
+form {
+    border: 2px solid #C3073F;
+    background-color: #6F2232;
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
+    width: 50%;
+}
+
+.profile-info {
+    border: 2px solid #C3073F;
+    background-color: #6F2232;
+    border-radius: 15px;
+    color: white;
+    padding: 15px;
+    height:fit-content;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.profile-pic {
+    border: 2px solid #C3073F;
+    background-color: #4E4E50;
+    border-radius: 15px;
+}
+
+.add-city {
+    display: block;
+  	margin-left: auto;
+	margin-right: auto;
+}
+
+.add-city-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-profile-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-profile{
+    width: 100px;
+    background-color: #C3073F;
+    color: white;
+}
+
+.edit-profile:hover{
+    background-color: #6F2232;
+    color: white;
+}
+
+.add-post{
+    width: 100px;
+    background-color: #C3073F;
+    color: white;
+}
+
+.add-post:hover{
+    background-color: #6F2232;
+    color: white;
+}
+
+.new-post{
+    width: 100px;
+    background-color: #C3073F;
+    color: white;
+}
+
+.new-post:hover{
+    background-color: #1A1A1D;
+    color: white;
+}
+
+.update-profile{
+    width: 120px;
+    background-color: #C3073F;
+    color: white;
+}
+
+.update-profile:hover{
+    background-color: #1A1A1D;
+    color: white;
+}
+
+.confirm-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-detail{
+    width: 120px;
+    background-color: #C3073F;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.post-detail:hover{
+    background-color: #6F2232;
     color: white;
 }

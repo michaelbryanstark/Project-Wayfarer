@@ -2,12 +2,12 @@
 
 <h1 class="title">Edit Profile</h1>
 <br/><br/>
-<div>    
+<div class="edit-profile-form">    
 {%if user.is_authenticated %}
     <form method="post">
         {% csrf_token %} 
         {{ form.as_p }}
-        <button>Update Profile</button>
+        <button class="update-profile">Update Profile</button>
     </form>
 </div>
     {%else%}
