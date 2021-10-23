@@ -1,11 +1,17 @@
 {% extends 'base.html' %} {% block content %}
-    <h1>Add a City</h1>
-    <form method="post">
-        <!--Security Feature-->
-        {% csrf_token %}
-        <!-- Generate inputs-->
-        {{form.as_p}}
-        <!--Submit Form-->
-        <input type="submit" value="Submit" />
-    </form>
+    <div class="add-city">
+        <h1>Add a City</h1>
+        <div class="add-city-form">
+            <form method="post">
+                <!--Security Feature-->
+                {% csrf_token %}
+                <!-- Generate inputs-->
+                {{form.as_p}}
+                <!--Submit Form-->
+                <input type="submit" value="Submit" />
+            </form>
+        </div>
+    
+    </div>
+    
 {% endblock %}
