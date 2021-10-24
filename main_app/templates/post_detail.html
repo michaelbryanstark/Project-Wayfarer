@@ -18,12 +18,14 @@
   <div class="detail__about">
     <h4 class="title is-4">{{post.author}} Says:</h4>
     <p class="title is-4">{{post.text}}</p>
-    <p>{{post.date_created}}</p>
+    <div class="created-container">
+    <p class='created-on'>{{post.date_created}}</p>
+    </div>
   </div>
-  <a href="{% url 'post_delete' post.pk %}" class="button is-danger">
-    <span class="icon">
-      <i class="button-delete">Delete</i>
-    </span>
+  <div class="icon">
+  <a href="{% url 'post_delete' post.pk %}" class=" is-danger">
+      <button class="button-delete">Delete</button>
+    </div>
   </a>
 </div>
 

@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class='search-button'>
-    <a class="city-search-button" href="{% url 'city_list' %}"><button>Clear Search</button></a>
+    <a class="city-search-button" href="{% url 'city_list' %}"><button class='city-search-button'>Clear Search</button></a>
   </div>
   </form>
   {% for city in cities %}
@@ -32,7 +32,7 @@
         </figure>
       </div>
       <div class="card-header">
-        <p class="card-header-title"><button class="post-detail">{{city.name}}</button></p>
+        <p class="card-header-title"><button class="card-header-title">{{city.name}}</button></p>
       </div>
     </div>
   </a>
