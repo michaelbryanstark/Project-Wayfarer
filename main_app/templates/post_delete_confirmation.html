@@ -7,9 +7,9 @@
         <div class="confirm-delete">
             <div class="buttons">
                 <!--confirm post delete-->
-                <input class="button-delete" type="submit" value="confirm" />
-                <!--redirect back to the post detail on cancel-->
-                <a class="button-cancel" href="{% url 'post_detail' post.pk %}"><button>Cancel</button></a>
+                <input class="button-delete" type="submit" value="Confirm" />
+                <!--redirect back to the post detail on cancel.  if this is a "button," it deletes the post regardless of whether it is cancelled or confirmed-->
+                <a class="button-cancel" href="{% url 'post_detail' post.pk %}">Cancel</a> 
             </div>
         </div>
         
