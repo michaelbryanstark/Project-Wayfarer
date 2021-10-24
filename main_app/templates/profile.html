@@ -21,7 +21,6 @@
             <img class="main-profile-picture" src="{{ user.profile.image }}" alt="{{user.profile.username}} profile photo">
         {% else %}
             <img class="main-profile-picture" src="../static/main_app/images/Profile_avatar_placeholder_large.jpeg" alt="Wayfarer default profile picture">
-
         {% endif %}
 </div>
 <br></br>
@@ -33,28 +32,33 @@
 <hr />
 <br><br>
   {% if post %}
-    <h2>My Posts: </h2>
+    <h2>My Posts </h2>
     {% for post in posts %}
-      <div class="card">
-        <div class="card-body">
-          <a class="r" href="{% url 'post_create' post.id %}">{{post.title}}</a>
+      <div class="">
+        <div class="">
+            {% if user.profile.image %}
+                <img class="main-profile-picture" src="{{ user.profile.image }}" alt="{{user.profile.username}} profile photo">
+            {% else %}
+                <img class="main-profile-picture" src="../static/main_app/images/Profile_avatar_placeholder_large.jpeg" alt="Wayfarer default profile picture">
+            {% endif %}
+          <a class="" href="{% url 'post_create' post.id %}">{{post.title}}</a>
           <p>{{post.date}}</p>
         </div>
       </div>
       <br>
     {% endfor %}
   {% else %}  
-    <div class="card">
-      <div class="card-body">
+    <div class="">
+      <div class="">
         <h5>Once you post, you can find them here.</h5>
-        <p>For now, head over to <a class="cities-anchor" href="{% url 'city_create' %}">Cities</a> and read reviews from our other wayfarers or add your own!</p>
+        <p>For now, head over to <a class="" href="{% url 'city_list' %}">Cities</a> and read reviews from our other wayfarers or add your own!</p>
       </div>
     </div>
     
 {% endif %} 
 
 
-{% endblock %}
+
 
 
 <a class="nav-link-profile" href="{% url 'edit_profile_view' user.profile.id %}"><button class="edit-profile">Edit Profile</button></a>
