@@ -10,7 +10,7 @@
       </div>  
     </div>
     <div class="btn-group" role="group" aria-label="Basic example">
-      <form action="{% url 'edit_profile_view' user.post.id %}">
+      <form action="{% url 'edit_profile_view' post.id %}">
         <input type="submit" class="d-inline-block btn btn-primary" value="Edit Review" />
       </form> 
       <button type="button" class="d-inline-block btn btn-danger" data-toggle="modal" data-target="#deleteModal">
@@ -34,7 +34,7 @@
           <p>Deleting "{{post.title}}"will be permanent and you will be left only with your memories.</p>
         </div>
         <div class="modal-footer">        
-          <form action="{% url 'delete' user.post.id %}">
+          <form action="{% url 'delete' post.id %}">
             <input type="submit" class="btn btn-danger" value="Delete" />
           </form> 
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
