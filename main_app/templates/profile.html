@@ -15,8 +15,25 @@
 </div>
 </div>
 
+
+
 <div class='edit-profile-container'>
 <a class="nav-link-profile" href="{% url 'edit_profile_view' user.profile.id %}"><button class="edit-profile">Edit Profile</button></a>
+</div>
+
+<div class="user-profile-posts">
+    {% for post in posts %}
+
+    <div class='test'>
+        <a href="{% url 'post_detail' post.pk %}">
+        {% if post.image %}
+            <img src="{{post.image.url}}" width="200px" height="200px" style="object-fit: cover;"/>
+        {% endif %}
+        </a>
+    </div>
+
+    {% endfor %}
+
 </div>
 
 {% endblock %}

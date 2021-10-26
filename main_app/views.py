@@ -23,11 +23,14 @@ class Home(TemplateView):
 class ProfileView(DetailView):
     model = Profile
     template_name = "profile.html"
+    odering = ['date_created']
     
-    def get_context_data(self, **kwargs):
+    def get_context_data(self,  **kwargs):
+        author = get_object_or_404(Profile, id=self.kwargs['pk'])
         context = super(ProfileView, self).get_context_data(**kwargs)
         page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
         context["page_user"] = page_user
+        context["posts"] = author.posts.all().order_by('-date_created')
         return context
     
 class EditProfileView(UpdateView):
