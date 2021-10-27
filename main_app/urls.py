@@ -18,4 +18,5 @@ urlpatterns = [
  path('createprofile/', views.CreateProfileView.as_view(), name="create_profile_view"),
  path('posts/', views.posts_index, name='index'),
  path('posts/<int:review_id>/posts', views.posts_detail, name='detail'),
+ path('posts/<int:pk>/edit', views.PostEdit.as_view(), name="post_edit"),
 ]
