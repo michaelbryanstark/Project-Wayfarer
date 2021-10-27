@@ -9,6 +9,7 @@ from django.utils.decorators import method_decorator
 from .models import Post, City, Profile, User
 from django.views.generic import DetailView
 from django.views.generic.edit import DeleteView, CreateView, UpdateView
+from .forms import ProfileForm, PostForm
 
 # Create your views here.
 
@@ -132,3 +133,15 @@ class CityCreate(CreateView):
     template_name = "city_create.html"
     success_url = "/cities/"
     
+
+def posts_index(request):
+  profile = Profile.objects.get(user_id=request.user)
+  posts = Post.objects.filter(profile_id=profile.id)
+  return render(request, 'posts/index.html', { 'posts': posts, 'profile':profile })    
+
+# Define the reviews detail view
+
+def posts_detail(request, post_id):
+  post = Post.objects.get(id=post_id)
+  profile = Profile.objects.get(id=post.profile_id)
+  return render(request, 'post/detail.html', {'post':post, 'profile':profile })

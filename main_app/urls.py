@@ -16,4 +16,6 @@ urlpatterns = [
  path('cities/new/', views.CityCreate.as_view(), name="city_create"),
  path('<int:pk>/editprofile', views.EditProfileView.as_view(), name="edit_profile_view"),
  path('createprofile/', views.CreateProfileView.as_view(), name="create_profile_view"),
+ path('posts/', views.posts_index, name='index'),
+ path('posts/<int:review_id>/posts', views.posts_detail, name='detail'),
 ]
