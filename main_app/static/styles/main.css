@@ -27,6 +27,7 @@ ul {
       display: flex;
       align-items: center;
       padding: 14px 16px;
+      font-family: 'Rock Salt', cursive;
       font-size:20px;
   }
   .nav-link{
@@ -40,6 +41,7 @@ ul {
 
 body{
    background-color: #1A1A1D;
+   font-family: 'Fredericka the Great', cursive;
    /* background: url("main_app/images/background.jpeg") 50% 0 no-repeat fixed;
    height: 650px;
    padding: 100px 0 0 0;    */

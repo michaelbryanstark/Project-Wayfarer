@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import ProfileView, ProfileUpdate, Profile, EditProfileView, CreateProfileView, account_redirect
+from .views import ProfileView, ProfileUpdate, Profile, EditProfileView, CreateProfileView, CityDetail, account_redirect
 from . import views
 
 # this like app.use() in express
