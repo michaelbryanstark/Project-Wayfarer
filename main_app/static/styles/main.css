@@ -365,6 +365,7 @@ form {
     background-color:#C3073F;
     color: white;
     padding: 15px;
+    width: 100px;
 }
 .icon{
     justify-content: center;
@@ -375,4 +376,50 @@ form {
 }
 .detail__img{
     margin-top: 15px;
+}
+
+.all-cities {
+    width: 45%;
+    float: left;
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    
+} 
+
+.posts-city {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    height: auto;
+    background-color: #4E4E50;
+} 
+
+.gallery-deets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.card-post {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.city-title {
+    width: 100px;
+}
+
+.post-title {
+    color: #1A1A1D;
 }
