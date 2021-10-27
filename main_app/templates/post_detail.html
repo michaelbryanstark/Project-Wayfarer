@@ -26,6 +26,14 @@
   <a href="{% url 'post_delete' post.pk %}" class=" is-danger">
       <button class="button-delete">Delete</button>
     </div>
+    <div class="icon">
+      <a href="{% url 'post_edit' post.pk %}" class=" is-danger">
+          <button class="button-delete">Edit Post</button>
+        </div>
+    <div class="icon">
+      <a href="{% url 'city_detail' post.city_id %}" class=" is-danger">
+          <button class="button-delete">Back to City</button>
+        </div>
   </a>
 </div>
 

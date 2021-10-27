@@ -1,0 +1,17 @@
+<h1 class="title">Edit Post</h1>
+<br/><br/>
+<div class="edit-profile-form">    
+{%if user.is_authenticated %}
+    <form method="post">
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button class="update-profile">Update Post</button>
+    </form>
+</div>
+    {%else%}
+You Cant be here
+    {% endif %}
+
+
+
+{% endblock %}
