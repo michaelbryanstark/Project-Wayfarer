@@ -1,15 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% comment %} <h1>Profile Page </h1> {% endcomment %}
-{% comment %} 
-<div class="profile-details">
-<div class="profile-info">
-    <p>Username: {{user.username}}</p>
-    <p>Member Name: {{user.profile.name}}</p>
-    <p>Home City: {{user.profile.current_city}}</p>
-    <p>Date Joined: {{user.profile.date_joined}}</p>
-</div> {% endcomment %}
 
 <h1>{{ user.username}}'s Profile</h1>
   <hr />
