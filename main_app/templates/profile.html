@@ -27,7 +27,8 @@
     <div class='test'>
         <a href="{% url 'post_detail' post.pk %}">
         {% if post.image %}
-            <img src="{{post.image.url}}" width="200px" height="200px" style="object-fit: cover;"/>
+        <h1 class="title">{{post.title}}</h1>
+            <img src="{{post.image}}" width="200px" height="200px" style="object-fit: cover;"/>
         {% endif %}
         </a>
     </div>
