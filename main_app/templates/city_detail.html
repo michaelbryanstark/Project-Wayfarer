@@ -20,9 +20,12 @@
         </div>
         <div class='search-button'>
         <a class="city-search-button" href="{% url 'city_list' %}"><button class='city-search-button'>Clear Search</button></a>
-        <a class= "city-button" href="{% url 'city_create' %}"><button>Add City!</button></a>
+        
       </div>
       </form>
+      <div class='add-city-button'>
+        <a class= "city-button" href="{% url 'city_create' %}"><button>Add City!</button></a>
+      </div>
       {% for city in cities %}
       <div class="city-links">
       <a class="city-links" href="{% url 'city_detail' city.pk %}">
