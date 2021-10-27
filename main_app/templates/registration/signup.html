@@ -1,11 +1,29 @@
 {% extends 'base.html' %} {% block content %}
+{% load static %}
 
-<h1 class="title">Sign Up</h1>
+
+<h1 class="title">Sign Up to Share!</h1>
+<h2>Have some cool street art you wanna share?? Sign up now!!!</h2>
+<div class="background">
 <div class="post-create"><form method="post" action="{% url 'signup' %}">
-  {% csrf_token %} {{ form.as_p }}
-  <input type="submit" class="btn" value="Sign Up" />
-  <input type="hidden" name="next" value="{{ next }}" />
-</form></div>
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey"></small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit">Sign up</button>
+  </form></div>
+  <img src="{% static "images/stairs.jpg" %}" alt="stairs" class="stairs"/>
+</div>
 
 
 {% endblock %}
