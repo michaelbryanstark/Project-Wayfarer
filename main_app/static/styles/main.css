@@ -28,11 +28,11 @@ li a:hover {
     align-items: center;
     padding: 14px 16px;
     font-family: 'Rock Salt', cursive;
-    font-size:20px;
+    font-size:17px;
 }
 .nav-link{
     font-family: 'Rock Salt', cursive;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .search-bar {
@@ -58,7 +58,7 @@ body{
 .title {
     color: #C3073F;
     text-align: center;
-    font-size: 25px;
+    font-size: 50px;
 }
 img {
     width: 60%;
@@ -100,11 +100,13 @@ h1 {
 
 p {
     color: white;
+    font-size: 20px;
 }
 
 h2{
     text-align: center;
     color: #C3073F;
+    font-size: 35px;
 }
 
 .nav-link-profile {
