@@ -373,7 +373,7 @@ form {
     color: white;
 }
 .button:hover{
-    background-color: #6F2232;
+    background-color: #1A1A1D;
 }
 .card-header-title button{
     font-family: 'Rock Salt', cursive;
@@ -437,4 +437,28 @@ form {
 
 .post-title {
     color: #1A1A1D;
+}
+
+.btn-new-post {
+    text-decoration: none;
+    display:block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #C3073F;
+    color: #1A1A1D;
+    font-size: 40px;
+    float: right;
+}
+
+.btn-new-post:hover{
+    background-color:#1A1A1D;
+    color: #C3073F;
+    text-decoration: none;
+}
+
+.card-header-title:hover {
+    background-color:#1A1A1D;
+    color: #C3073F;
+    text-decoration: none;
 }

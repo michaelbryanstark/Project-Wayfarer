@@ -69,6 +69,9 @@
       </a>
       </article>
     </div>
+ 
+      <a class="new-post-btn" href="{% url 'post_create' %}"><button class="btn-new-post">+</button></a>
+     
     <br>
     <div class="gallery-posts">
       <h1 class="post-title">Posts</h1>
@@ -90,9 +93,7 @@
           </div>
         </article>
         {% endfor %}
-        <div class='edit-profile-container'>
-        <a class="add-post" href="{% url 'post_create' %}"><button class="add-post">Add a Post</button></a>
-        </div>
+        
       </div>
     </div>
   </div>
