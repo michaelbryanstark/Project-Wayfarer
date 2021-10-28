@@ -14,4 +14,12 @@ You Cant be here
     {% endif %}
 
 
+ {% comment %} {% if profile.photo.url %}
+    <div class="profile-pic">
+        <img src="{{user.profile.image}}" alt="User Image">
+    {% else %}
+        <img src="../static/main_app/images/default_pic.jpeg" alt="User Image">
+        </div>
+    {% endif %} {% endcomment %}
+
 {% endblock %}
