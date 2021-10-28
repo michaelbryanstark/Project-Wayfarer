@@ -39,8 +39,8 @@ class EditProfileView(UpdateView):
     fields = ['name', 'image', 'current_city']
     template_name = 'editprofile.html'
     def get_success_url(self):
-         print(self.kwargs)
-         return reverse('profile_view', kwargs={'pk': self.object.pk})
+        print(self.kwargs)
+        return reverse('profile_view', kwargs={'pk': self.object.pk})
 
 class CreateProfileView(CreateView):
     model = Profile
@@ -104,8 +104,8 @@ class PostEdit(UpdateView):
     fields = ['title', 'image', 'text']
     template_name = 'post_edit.html'
     def get_success_url(self):
-         print(self.kwargs)
-         return reverse('post_detail', kwargs={'pk': self.object.pk})
+        print(self.kwargs)
+        return reverse('post_detail', kwargs={'pk': self.object.pk})
     
 class CityDetail(DetailView):
     model = City
