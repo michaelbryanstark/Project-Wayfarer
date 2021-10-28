@@ -380,7 +380,7 @@ form {
     background-color:#C3073F;
     color: white;
     padding: 15px;
-    width: 100px;
+    width: 150px;
 }
 .icon{
     justify-content: center;
@@ -397,7 +397,7 @@ form {
     width: 45%;
     float: left;
     padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    
     
 } 
 
@@ -405,7 +405,7 @@ form {
     width: 50%;
     float: right;
     padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    
     height: auto;
     background-color: #4E4E50;
 } 
@@ -420,7 +420,7 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 2px solid rgb(255, 255, 255);
+    
     border-radius: 15px;
 }
 
@@ -432,7 +432,9 @@ form {
 }
 
 .city-title {
-    width: 100px;
+    width: 150px;
+    color: #1A1A1D;
+
 }
 
 .post-title {
@@ -462,3 +464,8 @@ form {
     color: #C3073F;
     text-decoration: none;
 }
+
+.personal-nav {
+    float: right;
+}
+

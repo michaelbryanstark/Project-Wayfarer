@@ -3,10 +3,10 @@
 {% block title %}Cities{% endblock  %}
 
 {% block content %}
-
+<h1>Cities</h1>
+<h2>Click on a City's picture to see it's posts!</h2>
 <div class="gallery-forum">
   <div class="gallery-cities">
-  <h1 class="title pt-5">Cities</h1>
   <form class="mb-5" method="get">
     <div class="field has-addons">
       <div class="control">
@@ -20,10 +20,8 @@
     <a class="city-search-button" href="{% url 'city_list' %}"><button class='city-search-button'>Clear Search</button></a>
   </div>
   </form>
-  <div class='add-city-button'>
-    <a class= "city-button" href="{% url 'city_create' %}"><button>Add City!</button></a>
-  </div>
   {% for city in cities %}
+  <h1>{{city.name}}</h1>
   <div class="city-links">
   <a class="city-links" href="{% url 'city_detail' city.pk %}">
     <div class="card">
@@ -31,9 +29,6 @@
         <figure class="image is-square">
           <img src="{{city.image}}" alt="{{city.name}}" />
         </figure>
-      </div>
-      <div class="card-header">
-        <p class="card-header-title"><button class="card-header-title">{{city.name}}</button></p>
       </div>
     </div>
   </a>
