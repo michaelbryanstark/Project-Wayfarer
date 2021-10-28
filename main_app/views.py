@@ -102,7 +102,7 @@ class PostDelete(DeleteView):
 class PostEdit(UpdateView):
     model = Post
     fields = ['title', 'image', 'text']
-    template_name = 'post_edit.html'
+    template_name = 'editprofile.html'
     def get_success_url(self):
          print(self.kwargs)
          return reverse('post_detail', kwargs={'pk': self.object.pk})
