@@ -177,6 +177,7 @@ h2{
     color: white;
 }
 .city-button a{
+    font-family: 'Inconsolata', monospace;
     border-radius: 3px;
     border: 2px solid black;
     padding: 15px;
@@ -221,6 +222,7 @@ h2{
 }
 
 input[type=text] {
+    font-family: 'Inconsolata', monospace;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -266,18 +268,21 @@ form {
 }
 
 .add-city-form {
+    font-family: 'Inconsolata', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .edit-profile-form {
+    font-family: 'Inconsolata', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .post-create {
+    font-family: 'Inconsolata', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -315,6 +320,7 @@ form {
 }
 
 .new-post{
+    font-family: 'Inconsolata', monospace;
     width: 100px;
     background-color: #C3073F;
     color: white;
@@ -326,6 +332,7 @@ form {
 }
 
 .update-profile{
+    font-family: 'Inconsolata', monospace;
     width: 120px;
     background-color: #C3073F;
     color: white;
@@ -337,6 +344,7 @@ form {
 }
 
 .confirm-delete {
+    font-family: 'Inconsolata', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
