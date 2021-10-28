@@ -6,7 +6,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .models import Post, City, Profile, User
+from .models import Post, City, Profile
 from django.views.generic import DetailView
 from django.views.generic.edit import DeleteView, CreateView, UpdateView
 from .forms import ProfileForm, PostForm
