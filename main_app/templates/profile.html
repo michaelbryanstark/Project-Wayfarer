@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <br>
 <h1>Profile Page </h1>
@@ -12,7 +13,11 @@
 </div>
 
 <div class="profile-pic">
-    <img src="{{user.profile.image}}" alt="User Image">
+    {% if user.profile.image %}
+        <img class="main-profile-picture" src="{{ user.profile.image }}" alt="{{user.profile.username}} profile photo">
+    {% else %}
+        <img class="main-profile-picture" src="{% static '/images/User-Profile-PNG-File.png' %}" alt="Wayfarer default profile picture">
+    {% endif %}
 </div>
 </div>
 <br>
