@@ -64,7 +64,7 @@ img {
     width: 60%;
     margin: 0 auto;
     display: block;
-    
+    padding: 0;
     filter: drop-shadow(10px 10px 5px black);
 }
 .Wayfarer-is{
@@ -257,6 +257,7 @@ form {
     border: 2px solid #C3073F;
     background-color: #4E4E50;
     border-radius: 15px;
+    padding-left: 0;
 }
 
 .add-city {
