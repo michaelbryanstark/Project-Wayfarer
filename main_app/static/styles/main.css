@@ -28,11 +28,11 @@ li a:hover {
     align-items: center;
     padding: 14px 16px;
     font-family: 'Rock Salt', cursive;
-    font-size:20px;
+    font-size:17px;
 }
 .nav-link{
     font-family: 'Rock Salt', cursive;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .search-bar {
@@ -141,6 +141,7 @@ h2{
 }
 .Delete-title{
     text-align: center;
+    font-family: 'Inconsolata', monospace;
 }
 .button-delete{
     font-family: 'Rock Salt', cursive;
@@ -271,12 +272,14 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.85;
 }
 
 .post-create {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.85;
 }
 .edit-profile-container{
     justify-content: center;
@@ -414,6 +417,7 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top:-80px;
 }
 
 .card {
@@ -475,10 +479,60 @@ form {
     color: white;
     padding: 15px;
     width: 150px;
+    opacity: 1;
 }
 
 .form-btn:hover{
     background-color:#1A1A1D;
     color: white;
     text-decoration: none;
+}
+
+.art-1 {
+    height: 100vh;
+    background-image: url(https://wonderfulengineering.com/wp-content/uploads/2014/09/graffiti-wallpaper-30.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.art-2 {
+    height: 100vh;
+    background-image: url(https://www.boldtravel.com/wp-content/uploads/2015/05/Bogota-Colombia-Grafitti-Photography37-May-15.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.art-4 {
+    height: 100vh;
+    background-image: url(https://www.holidaybug.co.za/wp-content/uploads/2016/06/street-art.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.art-3 {
+    height: 100vh;
+    background-image: url(https://www.photocontestinsider.com/wp-content/uploads/2019/05/grafitti-art-1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.art-5 {
+    height: 100vh;
+    background-image: url(https://media.blogto.com/articles/20180628-graffiti-alley-4.jpg?width=1300&quality=70);
+    background-position: center center;
+    background-size: cover;
+}
+
+.art-6 {
+    height: 100vh;
+    background-image: url(https://cpb-us-e1.wpmucdn.com/sites.dartmouth.edu/dist/6/48/files/2018/01/Graffiti-a-Jacmel.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.art-7 {
+    height: 100vh;
+    background-image: url(https://d3rf6j5nx5r04a.cloudfront.net/-4hcrAPXydlbDDYOWguiiNZCcqw=/1200x933/product/1/7/3ac408fa714646f999d8ff1bcbff5b8f_opt.jpg);
+    background-position: center center;
+    background-size: cover;
 }

@@ -1,14 +1,17 @@
 {% extends 'base.html' %} {% block content %}
-
-<h1 class="title">Edit Profile</h1>
-<br/><br/>
+<div class="art-7">
+<br>
+<br>
+<br>
 <div class="edit-profile-form">    
 {%if user.is_authenticated %}
     <form method="post">
+    <h1 class="title">Edit Profile</h1>
         {% csrf_token %} 
         {{ form.as_p }}
         <button class="form-btn">Update</button>
     </form>
+</div>
 </div>
     {%else%}
 You Cant be here

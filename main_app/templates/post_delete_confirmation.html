@@ -1,22 +1,28 @@
 {% extends 'base.html' %} {% block content %}
-
-<h1 class="Delete-title">Are you sure you want to delete the post titled "{{post.title}}"?</h1>
+<div class="art-6">
+<br>
+<br>
+<br>
 <div class="post-create">
     <form  method="post">
+    <h1 class="Delete-title">Are you sure you want to delete the post titled "{{post.title}}"?</h1>
         {% csrf_token %}
         <div class="confirm-delete">
             <div class="buttons">
                 <!--confirm post delete-->
                 <input class="button-delete" type="submit" value="Confirm" />
                 <!--redirect back to the post detail on cancel.  if this is a "button," it deletes the post regardless of whether it is cancelled or confirmed-->
+                <br>
+                <br>
                 <div class="card-header-title">
                     <a href="{% url 'post_detail' post.pk %}"><button class="card-header-title">Cancel</button></a>     
                 </div>
-                 
+                
             </div>
         </div>
         
     </form>
+</div>
 </div>
 
 {% endblock %}
