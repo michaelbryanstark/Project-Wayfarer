@@ -1,14 +1,19 @@
 {% extends 'base.html' %} {% block content %}
-    <h1>Add a Post</h1>
-    <div class="post-create">
-        <form method="post">
-            <!--Security Feature-->
-            {% csrf_token %}
-            <!-- Generate inputs-->
-            {{form.as_p}}
-            <!--Submit Form-->
-            <button class="new-post">Submit Post</button>
-        </form>
-    </div>
-    
+<div class="art-4">
+<br>
+<br>
+<br>
+<div class="post-create">
+    <form method="post">
+    <h1>Add a Post</h1
+        <!--Security Feature-->
+        {% csrf_token %}
+        <!-- Generate inputs-->
+        {{form.as_p}}
+        <!--Submit Form-->
+        <button class="new-post">Submit Post</button>
+    </form>
+</div>
+</div>
+
 {% endblock %}

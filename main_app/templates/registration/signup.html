@@ -1,7 +1,10 @@
 {% extends 'base.html' %} {% block content %}
-
-<h1 class="title">Sign Up</h1>
+<div class="art-2">
+<br>
+<br>
+<br>
 <div class="post-create"><form method="post" action="{% url 'signup' %}">
+  <h1 class="title">Sign Up</h1>
   {% csrf_token %} {% for field in form %}
   <p>
     {{ field.label_tag }}<br>
@@ -16,6 +19,7 @@
 {% endfor %}
 <button class="form-btn" type="sign-up-button">Sign up</button>
 </form></div>
+</div>
 
 
 {% endblock %}
