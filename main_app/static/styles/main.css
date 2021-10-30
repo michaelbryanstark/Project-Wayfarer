@@ -58,8 +58,21 @@ body{
 .title {
     color: rgb(83, 48, 107);
     text-align: center;
+    font-size: 50px;
+}
+
+.title-4{
+    color: rgb(83, 48, 107);
+    text-align: center;
+    font-size: 30px;
+}
+
+.title-5{
+    color: rgb(83, 48, 107);
+    text-align: center;
     font-size: 25px;
 }
+
 img {
     width: 60%;
     margin: 0 auto;
@@ -70,6 +83,7 @@ img {
 .Wayfarer-is{
     text-align: center;
     color: rgb(83, 48, 107);
+    font-size: 35px;
 }
 .title-container {
     display: flex;
@@ -536,4 +550,8 @@ form {
     background-image: url(https://d3rf6j5nx5r04a.cloudfront.net/-4hcrAPXydlbDDYOWguiiNZCcqw=/1200x933/product/1/7/3ac408fa714646f999d8ff1bcbff5b8f_opt.jpg);
     background-position: center center;
     background-size: cover;
+}
+
+h4 {
+    font-size: 35px;
 }
