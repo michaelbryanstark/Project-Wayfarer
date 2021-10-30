@@ -21,7 +21,7 @@
           <a class="nav-link" href="/">Home </a>
         </li>
         {% if user.is_authenticated %}
-        <li class="nav-welcome">Welcome: {{user.username}}</li>
+        
         <li class="nav-item">
           <a class="nav-link" href="/cities/">Cities</a>
         </li>
@@ -29,6 +29,8 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'profile_view' user.profile.id %}">Profile</a>
         </li>
+        <div class="personal-nav">
+          <li class="nav-welcome">Welcome: {{user.username}}</li>
         {%else%}
         <li class="nav-item">
           <a class="nav-link" href="{% url 'create_profile_view' %}">Create Profile</a>
@@ -45,6 +47,8 @@
             <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
           </li> 
           {% endif %}
+        </div>
+        
           
       </ul>
       

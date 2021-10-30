@@ -4,8 +4,9 @@
 <div class="post-create">
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %} {{ form.as_p }}
-    <input type="submit" class="btn" value="login" />
+   
     <input type="hidden" name="next" value="{{ next }}" />
+    <button class="form-btn" type="sign-up-button">Log In</button>
   </form>
 </div>
 

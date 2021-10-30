@@ -3,7 +3,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #C3073F;
+    background-color: rgb(218, 190, 73);
 }
 
 li {
@@ -12,14 +12,14 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: rgb(83, 48, 107);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 li a:hover {
-    background-color: #950740;
+    background-color: rgb(218, 126, 52);
 }
 
 .nav-welcome {
@@ -42,7 +42,7 @@ li a:hover {
 }
 
 body{
-    background-color: #1A1A1D;
+    background-color: rgb(59, 141, 203);
     font-family: 'Zen Kurenaido', sans-serif;
     /* background: url("main_app/images/background.jpeg") 50% 0 no-repeat fixed;
     height: 650px;
@@ -56,7 +56,7 @@ body{
     
 }
 .title {
-    color: #C3073F;
+    color: rgb(83, 48, 107);
     text-align: center;
     font-size: 25px;
 }
@@ -69,7 +69,7 @@ img {
 }
 .Wayfarer-is{
     text-align: center;
-    color: #C3073F;
+    color: rgb(83, 48, 107);
 }
 .title-container {
     display: flex;
@@ -94,7 +94,7 @@ img {
 }
 
 h1 {
-    color: #C3073F;
+    color: rgb(83, 48, 107);
     text-align: center;
 }
 
@@ -104,7 +104,7 @@ p {
 
 h2{
     text-align: center;
-    color: #C3073F;
+    color: rgb(83, 48, 107);
 }
 
 .nav-link-profile {
@@ -112,7 +112,7 @@ h2{
 }
 
 .city-links {
-    color: #C3073F;
+    color: white;
 }
 
 .gallery-forum{
@@ -143,23 +143,19 @@ h2{
     text-align: center;
 }
 .button-delete{
-    font-family: 'Inconsolata', monospace;
-    background-color: red;
+    font-family: 'Rock Salt', cursive;
+    background-color:rgb(218, 126, 52);
     color: white;
-    padding: 10px;
-    margin: 8px 10px;
-    border: none;
-    cursor: pointer;
-    width: 120px;
-    opacity: 0.9;
-    text-decoration: none;
+    padding: 15px;
+    width: 150px;
+    margin-top: 20px;
 }
 .buttons{
     text-align: center;
 }
 .button-delete:hover{
-    background-color:white;
-    color: #1A1A1D;
+    background-color:#f70303;
+    color: white;
     text-decoration: none;
 }
 
@@ -169,11 +165,11 @@ h2{
     margin-top: 24px;
     margin-left: 24px;
     margin-bottom: 24px;
-    background-color: #C3073F;
+    background-color: rgb(218, 126, 52);
     color: white;
 }
 .add-city-button button:hover{
-    background-color: #6F2232;
+    background-color: #1A1A1D;
     color: white;
 }
 .city-button a{
@@ -185,13 +181,13 @@ h2{
     
 }
 .button-cancel button{
-    background-color:blue;
-    color: white;
-    margin: 24px;
     font-family: 'Inconsolata', monospace;
-    width: 120px;
-    height: 35px;
-    border-radius: 3px;
+    width: 100px;
+    margin-top: 24px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    background-color: rgb(218, 190, 73);
+    color: white;
 }
 .button-cancel button:hover{
     background-color: white;
@@ -211,7 +207,7 @@ h2{
 .search-button button{
     font-family: 'Inconsolata', monospace;
     width: 100px;
-    background-color: #C3073F;
+    background-color: rgb(218, 190, 73);
     color: white;
 }
 
@@ -229,8 +225,8 @@ input[type=text] {
 
 form {
     font-family: 'Inconsolata', monospace;
-    border: 2px solid #C3073F;
-    background-color: #6F2232;
+    border: 2px solid rgb(218, 126, 52);
+    background-color: rgb(65, 145, 78);
     border-radius: 15px;
     color: white;
     padding: 15px;
@@ -238,8 +234,8 @@ form {
 }
 
 .profile-info {
-    border: 2px solid #C3073F;
-    background-color: #6F2232;
+    border: 2px solid rgb(218, 126, 52);
+    background-color: rgb(65, 145, 78);
     border-radius: 15px;
     color: white;
     padding: 15px;
@@ -254,8 +250,8 @@ form {
 }
 
 .profile-pic {
-    border: 2px solid #C3073F;
-    background-color: #4E4E50;
+    border: 2px solid rgb(218, 126, 52);
+    background-color: rgb(83, 48, 107);
     border-radius: 15px;
 }
 
@@ -288,16 +284,16 @@ form {
 }
 
 .edit-profile {
-    font-family: 'Inconsolata', monospace;
-    width: 100px;
-    background-color: #C3073F;
+    font-family: 'Rock Salt', cursive;
+    background-color:rgb(218, 126, 52);
     color: white;
-    margin-top: 25px;
     padding: 15px;
+    width: 150px;
+    margin-top: 20px;
 }
 
 .edit-profile:hover{
-    background-color: #6F2232;
+    background-color: #1A1A1D;
     color: white;
 }
 
@@ -310,13 +306,13 @@ form {
 }
 
 .add-post:hover{
-    background-color: #6F2232;
+    background-color: #1A1A1D;
     color: white;
 }
 
 .new-post{
     width: 100px;
-    background-color: #C3073F;
+    background-color: rgb(218, 126, 52);
     color: white;
 }
 
@@ -327,7 +323,7 @@ form {
 
 .update-profile{
     width: 120px;
-    background-color: #C3073F;
+    background-color: rgb(218, 126, 52);
     color: white;
 }
 
@@ -346,7 +342,7 @@ form {
     font-family: 'Inconsolata', monospace;
     width: 120px;
     color: white;
-    background-color: #C3073F;
+    background-color: rgb(218, 126, 52);
     margin-bottom: 15px;
     padding: 15px;
 }
@@ -369,18 +365,19 @@ form {
 }
 .button{
     font-family: 'Inconsolata', monospace;
-    background-color: #C3073F;
+    background-color: rgb(218, 126, 52);
     color: white;
 }
 .button:hover{
     background-color: #1A1A1D;
+    color: white;
 }
 .card-header-title button{
     font-family: 'Rock Salt', cursive;
-    background-color:#C3073F;
+    background-color:rgb(218, 126, 52);
     color: white;
     padding: 15px;
-    width: 100px;
+    width: 150px;
 }
 .icon{
     justify-content: center;
@@ -397,7 +394,7 @@ form {
     width: 45%;
     float: left;
     padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    
     
 } 
 
@@ -405,9 +402,12 @@ form {
     width: 50%;
     float: right;
     padding: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    height: auto;
-    background-color: #4E4E50;
+    height: 1000px;
+    background-color: rgb(83, 48, 107);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 } 
 
 .gallery-deets {
@@ -420,7 +420,7 @@ form {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 2px solid rgb(255, 255, 255);
+    
     border-radius: 15px;
 }
 
@@ -432,11 +432,13 @@ form {
 }
 
 .city-title {
-    width: 100px;
+    width: 150px;
+    color: rgb(65, 145, 78);
+
 }
 
 .post-title {
-    color: #1A1A1D;
+    color: rgb(65, 145, 78);
 }
 
 .btn-new-post {
@@ -445,7 +447,7 @@ form {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    background-color: #C3073F;
+    background-color: rgb(218, 126, 52);
     color: #1A1A1D;
     font-size: 40px;
     float: right;
@@ -453,12 +455,30 @@ form {
 
 .btn-new-post:hover{
     background-color:#1A1A1D;
-    color: #C3073F;
+    color: white;
     text-decoration: none;
 }
 
 .card-header-title:hover {
     background-color:#1A1A1D;
-    color: #C3073F;
+    color: white;
+    text-decoration: none;
+}
+
+.personal-nav {
+    float: right;
+}
+
+.form-btn {
+    font-family: 'Rock Salt', cursive;
+    background-color:rgb(218, 126, 52);
+    color: white;
+    padding: 15px;
+    width: 150px;
+}
+
+.form-btn:hover{
+    background-color:#1A1A1D;
+    color: white;
     text-decoration: none;
 }

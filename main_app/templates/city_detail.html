@@ -8,7 +8,7 @@
   
     <div class="gallery-forum">
       <div class="gallery-cities">
-      <h1 class="title pt-5">Cities</h1>
+      <h1>Cities</h1>
       <form class="mb-5" method="get">
         <div class="field has-addons">
           <div class="control">
@@ -57,7 +57,7 @@
     <div class="post-deets">
       <div class="gallery-deets">
         <div class="card-header">
-          <h3 class="city-title">{{city.name}}</h3>
+          <h1 class="city-title">{{city.name}}</h1>
         </div>
         <div class="card-post">
           <div class="card-image">
@@ -82,8 +82,8 @@
                   <span><img src="{{post.image}}" alt="{{post.title}}" /></span>
               </figure>
             </div>
-            <div class="card-header">
-              <a href="{% url 'post_detail' post.pk %}" class="post-detail"><button class="post-detail">{{post.title}}</button></a>
+            <div class="card-header-title">
+              <a href="{% url 'post_detail' post.pk %}"><button class="card-header-title">{{post.title}}</button></a>
             </div>
           </div>
           {% empty %}
